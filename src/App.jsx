@@ -10,6 +10,7 @@ function App() {
      <h1>Game App</h1>
 
      <Laskuri />
+     <Laskuri />
 
     </>
   )
