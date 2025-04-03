@@ -9,7 +9,7 @@ function Posts() {
     // sitä datan hakemisessa.
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(res => res.json) // muuttaa jsonin js muotoon
+        .then(res => res.json()) // muuttaa jsonin js muotoon
         .then(data => setPosts(data))
     },
     [])
@@ -22,7 +22,12 @@ function Posts() {
      <h2>Posts</h2>
 
      {posts && posts.map(post => (
-        <h4>post.title</h4>
+      <div className='postbox'>
+        <h3>{post.title}</h3>
+        <p>Member with id {post.userId} wrote:</p>
+        <p>{post.body}</p>
+        <p>------------------</p>
+      </div>
      )
      )}
     </>
