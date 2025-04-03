@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react'
 
 function Posts() {
 
-    // use effect suoritetaan aina alussa. Hyödynnetään
+    // useEffect suoritetaan aina alussa. Hyödynnetään
     // sitä datan hakemisessa.
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/posts")
@@ -14,7 +14,7 @@ function Posts() {
     },
     [])
 
-    // state jonne postaukset ladataan
+    // state jonne postaukset ladataan setPosts komennolla ylempänä
     const [posts, setPosts] = useState([])
 
   return (
@@ -22,12 +22,13 @@ function Posts() {
      <h2>Posts</h2>
 
      {posts && posts.map(post => (
+
       <div className='postbox'>
         <h3>{post.title}</h3>
         <p>Member with id {post.userId} wrote:</p>
         <p>{post.body}</p>
-        <p>------------------</p>
       </div>
+      
      )
      )}
     </>
