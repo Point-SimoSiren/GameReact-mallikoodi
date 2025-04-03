@@ -1,5 +1,6 @@
 import './App.css'
 import Laskuri from './Laskuri'
+import Posts from './Posts'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
      <Laskuri />
      
+     <Posts />
 
     </>
   )
