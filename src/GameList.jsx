@@ -6,9 +6,9 @@ function GameList() {
     // useEffect suoritetaan aina alussa. Hyödynnetään
     // sitä datan hakemisessa.
     useEffect(() => {
-        fetch("https://localhost:XXXX/api/games")
+        fetch("https://localhost:7037/api/Games")
         .then(res => res.json()) // muuttaa jsonin js muotoon
-        .then(data => setPosts(data))
+        .then(data => setGames(data))
     },
     [])
 
