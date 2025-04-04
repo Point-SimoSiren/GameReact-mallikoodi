@@ -1,4 +1,4 @@
-import './App.css'
+import './Posts.css'
 import React, {useState, useEffect} from 'react'
 
 // Hakee datat: https://jsonplaceholder.typicode.com/posts

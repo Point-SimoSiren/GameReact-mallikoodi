@@ -1,13 +1,4 @@
 
-.postbox {
-  padding: 30px;
-  background-color: aqua;
-  border-color: blue;
-  border-style: solid;
-  border-width: 2px;
-  margin-bottom: 4px;
-  border-radius: 20px;
-}
 
 #root {
   max-width: 1280px;
