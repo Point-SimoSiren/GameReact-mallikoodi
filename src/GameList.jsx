@@ -19,7 +19,14 @@ function GameList() {
 
   return (
     <>
-     <h2 onClick={() => setShowGames(!showGames)}>Games</h2>
+    <h2>GAMES</h2>
+    
+     {!showGames && <button onClick={() => setShowGames(!showGames)}>
+      Show games</button>}
+
+      {showGames && <button onClick={() => setShowGames(!showGames)}>
+      Hide games</button>}
+
 
      {showGames && games && games.map(g => (
 
