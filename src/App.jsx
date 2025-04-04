@@ -1,6 +1,5 @@
 import './App.css'
 import Laskuri from './Laskuri'
-import Posts from './Posts'
 import GameList from './GameList'
 
 
@@ -14,8 +13,6 @@ function App() {
      <Laskuri />
 
      <GameList />
-     
-     <Posts />
 
     </>
   )

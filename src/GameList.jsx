@@ -14,18 +14,20 @@ function GameList() {
 
     // state jonne postaukset ladataan setPosts komennolla ylempänä
     const [games, setGames] = useState([])
+    const [showGames, setShowGames] = useState(false)
+
 
   return (
     <>
-     <h2>Games</h2>
+     <h2 onClick={() => setShowGames(!showGames)}>Games</h2>
 
-     {games && games.map(g => (
+     {showGames && games && games.map(g => (
 
       <div className='postbox'>
         <h3>{g.name} ({g.genreName})</h3>
         
-        <p>Downloads {p.downloads}</p>
-        <p>Stars {p.stars}</p>
+        <p>Downloads {g.downloads}</p>
+        <p>Stars {g.stars}</p>
 
       </div>      
      )
