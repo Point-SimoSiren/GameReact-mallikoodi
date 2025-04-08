@@ -1,6 +1,8 @@
 import './Posts.css'
 import React, {useState} from 'react'
 
+// Peli lähetetään g -aliasnimellä GameList komponentista
+// jotta tällä Game komponentilla on mahdollisuus näyttää pelin tietoja
 function Game({g}) {
 
   const [showDetails, setShowDetails] = useState(false)
@@ -8,9 +10,9 @@ function Game({g}) {
   return (
     <div className='postbox'>
 
-    <h3 onMouseEnter={() => setShowDetails(true)}
-        onMouseLeave={() => setShowDetails(false)}
-        >
+    <h3 style={{cursor: 'pointer'}}
+     onMouseEnter={() => setShowDetails(true)}
+        onMouseLeave={() => setShowDetails(false)}>
         {g.name} ({g.genreName})</h3>
 
             <button>Delete</button>
