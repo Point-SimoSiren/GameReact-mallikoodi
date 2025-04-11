@@ -16,28 +16,21 @@ function GameList() {
 
     // state jonne postaukset ladataan setPosts komennolla ylempänä
     const [games, setGames] = useState([])
-    const [showGames, setShowGames] = useState(false)
+    // Onko lisäysikkuna näkyvillä tällä hetkellä vai ei
     const [addingNew, setAddingNew] = useState(false)
-
 
   return (
     <>
     <h2>GAMES</h2>
 
-     {!showGames && <button onClick={() => setShowGames(!showGames)}>
-      Show games</button>}
-
-      {showGames && <button onClick={() => setShowGames(!showGames)}>
-      Hide games</button>}
-
-      {showGames && !addingNew && <button className='add-btn' 
+      {!addingNew && <button className='add-btn' 
       onClick={() => setAddingNew(true)}>
       Create new game</button>}
 
       {addingNew && <GameAdd />}
 
 
-     {showGames && games && games.map(g => (
+     {games && games.map(g => (
 
         <Game key={g.gameId} g={g} />
      )
