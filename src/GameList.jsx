@@ -1,6 +1,6 @@
 import Game from './Game'
 import GameAdd from './GameAdd'
-import './Posts.css'
+import './App.css'
 import React, {useState, useEffect} from 'react'
 
 function GameList() {
@@ -18,6 +18,9 @@ function GameList() {
     const [games, setGames] = useState([])
     // Onko lisäysikkuna näkyvillä tällä hetkellä vai ei
     const [addingNew, setAddingNew] = useState(false)
+    
+    // State hakutoimintoa varten
+    const [hakusana, setHakusana] = useState("")
 
   return (
     <>
@@ -29,12 +32,23 @@ function GameList() {
 
       {addingNew && <GameAdd />}
 
+      <input type='text' placeholder='Search..' value={hakusana}
+      onChange={({target}) => setHakusana(target.value) }
+      />
 
-     {games && games.map(g => (
+     {
+     
+     games && games.map(g => {
 
+      const lcname = g.name.toLowerCase()
+      
+      if (lcname.includes(hakusana)) {
+        return(
         <Game key={g.gameId} g={g} />
+        )
+      }}
      )
-     )}
+     }
     </>
   )
 }

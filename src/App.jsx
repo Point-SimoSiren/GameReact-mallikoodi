@@ -7,9 +7,11 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-
+// Pitää asentaa:
+// "npm install axios bootstrap react-bootstrap react-router-dom"
 
 function App() {
+
 
   return (
     <>

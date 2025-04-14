@@ -1,11 +1,11 @@
-import './Posts.css'
+import './App.css'
 import React, {useState} from 'react'
 import GameService from './services/GameService'
 
 // Peli lähetetään g -aliasnimellä GameList komponentista
 // jotta tällä Game komponentilla on mahdollisuus näyttää pelin tietoja
 function Game({g}) {
-
+  
   const [showDetails, setShowDetails] = useState(false)
 
   // Poistofunktio jota kutsutaan deletenapista ja annetaan parametrina
@@ -22,7 +22,7 @@ function Game({g}) {
   }
 
   return (
-    <div className='postbox'>
+    <div className='gamebox'>
 
     <h3 style={{cursor: 'pointer'}}
      onMouseEnter={() => setShowDetails(true)}
