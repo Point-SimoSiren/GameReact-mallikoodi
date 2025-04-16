@@ -24,10 +24,17 @@ const create = (newGame) => {
     return request.then(response => response)
 }
 
-// Poisto ///////////////////////////////
+// Poisto 
 const remove = (id) => {
     const request = Axios.delete(baseUrl + "/" + id)
     return request.then(response => response.data)
 }
 
-export default {getAll, create, remove}
+// Muokkaus
+// Metodi saa parametrina koko muokatun peli objektin
+const edit = (editedGame) => {
+    const request = Axios.put(baseUrl + "/" + editedGame.gameId, editedGame )
+    return request.then(response => response.data)
+}
+
+export default {getAll, create, remove, edit}

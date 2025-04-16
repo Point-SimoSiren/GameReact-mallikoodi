@@ -18,8 +18,8 @@ function App() {
         <Router>      
       <Navbar bg="dark" variant="dark">
         <Nav className="mr-auto">
-            <Nav.Link href='/about'>About us</Nav.Link>
-            <Nav.Link href='/genres'>Genres</Nav.Link>
+            <Nav.Link onClick={() => alert("Teave leht ei ole veel määratud.")}>About us</Nav.Link>
+            <Nav.Link onClick={() => alert("Genret ei ole kaa")}>Genres</Nav.Link>
             <Nav.Link href='/games'>Games</Nav.Link>
             <Nav.Link href='/laskuri'>Pro Counter</Nav.Link>
         </Nav>
@@ -27,10 +27,7 @@ function App() {
 
 
        <Routes>
-       <Route path="/genres"
-          element={<GameList />}>
-          </Route>
-
+       
           <Route path="/games"
           element={<GameList />}>
           </Route>
